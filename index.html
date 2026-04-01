@@ -193,25 +193,18 @@
     <section id="contact" class="contact">
       <div class="section-header">
         <h2>Book an Appointment</h2>
-        <p class="section-subtitle">Serving Windsor, Tecumseh, LaSalle, Lakeshore, and all of Essex County. We come to you.</p>
+        <p class="section-subtitle">Serving Windsor, Tecumseh, LaSalle, Lakeshore, and all of Essex County. Pick a time that works for you.</p>
       </div>
-      <form id="contact-form">
-        <div class="form-row">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-        </div>
-        <div class="form-row">
-          <input type="tel" name="phone" placeholder="Your Phone" required>
-          <select name="service" required>
-            <option value="" disabled selected>Select a Service</option>
-            <option value="exterior">Exterior &mdash; $80</option>
-            <option value="interior">Interior &mdash; $120</option>
-            <option value="full">Full Detail &mdash; $175</option>
-          </select>
-        </div>
-        <textarea name="message" placeholder="Vehicle type, preferred date/time, location, or any questions..." rows="4"></textarea>
-        <button type="submit" class="btn btn-lg">Send Request</button>
-      </form>
+      <div class="cal-embed">
+        <iframe
+          src="https://cal.com/rosecitydetailing?embed=true&theme=auto"
+          frameborder="0"
+          width="100%"
+          height="700"
+          style="min-height:600px; border-radius:12px;"
+          loading="lazy"
+        ></iframe>
+      </div>
     </section>
   </main>
 

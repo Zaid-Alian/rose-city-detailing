@@ -32,17 +32,6 @@ navLinks.addEventListener('click', (e) => {
   }
 });
 
-// Contact form submission
-const form = document.getElementById('contact-form');
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const data = Object.fromEntries(new FormData(form));
-  console.log('Form submitted:', data);
-  form.reset();
-  alert('Thanks for reaching out! We\'ll get back to you shortly.');
-});
-
 // Before/After comparison sliders
 document.querySelectorAll('.comparison-slider').forEach((slider) => {
   const wrapper = slider.querySelector('.comparison-img-wrapper');
