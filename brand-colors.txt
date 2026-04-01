@@ -1,0 +1,39 @@
+Rose City Detailing — Brand Color Palette
+==========================================
+
+LIGHT MODE
+----------
+Accent (rose red):       #b5314a  — Primary brand color: buttons, badges, accents
+Accent hover:            #8e2a3c  — Darker rose for hover states
+Accent soft:             rgba(181, 49, 74, 0.08)  — Subtle rose tint for backgrounds
+Primary (deep burgundy): #2d1f2b  — Headings, text
+Nav/Dark background:     #1a1218  — Navbar, footer, comparison labels
+Light background:        #faf5f6  — Warm off-white with rose tint
+White:                   #fff     — Cards, main background
+Border:                  #e8d8de  — Soft pink-grey for card borders
+Text:                    #2d1f2b  — Main body text
+Muted text:              #7a6472  — Warm mauve-grey for secondary text
+Card border bottom:      #f0e4e8  — Subtle rose-tinted divider
+
+DARK MODE
+----------
+Primary:                 #f0e4e8  — Light rose-tinted text
+Background:              #131014  — Deep warm black
+Nav background:          #0e0a0d  — Darkest warm black
+Card/White:              #161114  — Dark card surfaces
+Light sections:          #1e161b  — Slightly lifted dark surface
+Border:                  #2e2228  — Warm dark border
+Text:                    #e0d4d8  — Light rose-tinted body text
+Muted text:              #9a8a92  — Warm grey secondary text
+Form background:         #1e161b  — Input fields
+Form focus:              #241c22  — Focused input fields
+
+ACCENT COLORS (same in both modes)
+-----------------------------------
+Rose red:                #b5314a
+Rose hover:              #8e2a3c
+
+FONTS
+-----
+Headings: Playfair Display (serif) — 700, 800, 900
+Body:     Inter (sans-serif) — 400, 500, 600, 700, 800
