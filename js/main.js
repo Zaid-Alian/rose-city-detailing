@@ -146,9 +146,6 @@ document.querySelectorAll('.comparison-slider').forEach((slider) => {
     }
     if (!data || typeof data !== 'object') return;
 
-    // Debug: log all messages from Cal.com iframe (remove after testing)
-    console.log('postMessage received:', JSON.stringify(data).substring(0, 300));
-
     // Deeply search the message for booking success signals
     const str = JSON.stringify(data).toLowerCase();
     if (str.includes('bookingsuccessful') || str.includes('booking_successful')) {
