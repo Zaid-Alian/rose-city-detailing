@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <style>
+      .serif { font-family: 'GFS Didot', 'Noto Serif Display', serif; }
+      .sans { font-family: 'Inter', 'Lato', sans-serif; }
+    </style>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="400" cy="400" r="250" stroke="#8e2a3c" stroke-width="10.00"/>
+    <circle cx="400" cy="400" r="220.00" stroke="#8e2a3c" stroke-width="3.00" opacity="0.95"/>
+    <path d="M 202.50 312.50 C 262.50 250.00, 370.00 225.00, 482.50 232.50 C 552.50 240.00, 612.50 270.00, 652.50 310.00" stroke="#8e2a3c" stroke-width="9.50"/>
+  </g>
+  <g>
+    <text x="292.50" y="485.00" class="serif" font-size="295.00" fill="#8e2a3c" opacity="0.99">R</text>
+    <text x="405.00" y="490.00" class="serif" font-size="305.00" fill="none" stroke="#8e2a3c" stroke-width="6.50" paint-order="stroke fill markers">C</text>
+  </g>
+  <g transform="translate(400.00,555.00)">
+    <path d="M -25.00 -17.50 C -40.00 -2.50, -42.50 17.50, -32.50 35.00 C -15.00 25.00, -10.00 5.00, -12.50 -15.00 Z" fill="#8e2a3c" opacity="0.98"/>
+    <path d="M 0 -30.00 C -12.50 -12.50, -12.50 10.00, 0 30.00 C 12.50 10.00, 12.50 -12.50, 0 -30.00 Z" fill="#8e2a3c"/>
+    <path d="M 25.00 -17.50 C 40.00 -2.50, 42.50 17.50, 32.50 35.00 C 15.00 25.00, 10.00 5.00, 12.50 -15.00 Z" fill="#8e2a3c" opacity="0.98"/>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1400" viewBox="0 0 1200 1400">
+  <defs>
+    <style>
+      .serif { font-family: 'GFS Didot', 'Noto Serif Display', serif; }
+      .sans { font-family: 'Inter', 'Lato', sans-serif; }
+    </style>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="600" cy="430" r="235" stroke="#8e2a3c" stroke-width="9.40"/>
+    <circle cx="600" cy="430" r="206.80" stroke="#8e2a3c" stroke-width="2.82" opacity="0.95"/>
+    <path d="M 414.35 347.75 C 470.75 289.00, 571.80 265.50, 677.55 272.55 C 743.35 279.60, 799.75 307.80, 837.35 345.40" stroke="#8e2a3c" stroke-width="8.93"/>
+  </g>
+  <g>
+    <text x="498.95" y="509.90" class="serif" font-size="277.30" fill="#8e2a3c" opacity="0.99">R</text>
+    <text x="604.70" y="514.60" class="serif" font-size="286.70" fill="none" stroke="#8e2a3c" stroke-width="6.11" paint-order="stroke fill markers">C</text>
+  </g>
+  <g transform="translate(600.00,575.70)">
+    <path d="M -23.50 -16.45 C -37.60 -2.35, -39.95 16.45, -30.55 32.90 C -14.10 23.50, -9.40 4.70, -11.75 -14.10 Z" fill="#8e2a3c" opacity="0.98"/>
+    <path d="M 0 -28.20 C -11.75 -11.75, -11.75 9.40, 0 28.20 C 11.75 9.40, 11.75 -11.75, 0 -28.20 Z" fill="#8e2a3c"/>
+    <path d="M 23.50 -16.45 C 37.60 -2.35, 39.95 16.45, 30.55 32.90 C 14.10 23.50, 9.40 4.70, 11.75 -14.10 Z" fill="#8e2a3c" opacity="0.98"/>
+  </g>
+  <g transform="translate(600,910)">
+    <text x="0" y="0" text-anchor="middle" class="serif" font-size="120" letter-spacing="10" fill="#8e2a3c">ROSE CITY</text>
+    <rect x="-340" y="45" width="680" height="2.4" fill="#8e2a3c" opacity="0.90"/>
+    <text x="0" y="123" text-anchor="middle" class="sans" font-size="46" font-weight="600" letter-spacing="18" fill="#8e2a3c">DETAILING</text>
+    <text x="0" y="186" text-anchor="middle" class="sans" font-size="24" font-weight="500" letter-spacing="9" fill="#8e2a3c" opacity="0.95">WINDSOR • ONTARIO</text>
+  </g>
+</svg>
