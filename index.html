@@ -37,7 +37,7 @@
     "@type": "AutoDetailing",
     "name": "Rose City Detailing",
     "url": "https://rosecitydetailing.com",
-    "logo": "https://rosecitydetailing.com/images/New%20logo%20April12026.svg",
+    "logo": "https://rosecitydetailing.com/images/rose_city_detailing_logo_pack/rose_city_detailing_luxury_horizontal.png",
     "description": "Professional mobile car detailing service in Windsor, Ontario. Exterior wash, interior detail, ceramic coating and paint correction.",
     "areaServed": [
       {"@type": "City", "name": "Windsor", "addressRegion": "ON", "addressCountry": "CA"},
@@ -84,7 +84,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -95,7 +95,7 @@
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#work">My Work</a></li>
+        <li><a href="#work">Results</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#contact" class="nav-cta">Book Now</a></li>
       </ul>
@@ -107,190 +107,288 @@
   </header>
 
   <main>
+    <!-- ─── Hero ─── -->
     <section id="home" class="hero">
       <div class="hero-content">
-        <p class="hero-pre">Windsor's Own</p>
-        <h1>Rose City Detailing</h1>
-        <p class="hero-h1-sub">Car Detailing in Windsor, Ontario</p>
-        <div class="hero-divider"></div>
-        <p class="hero-tagline">Premium mobile detailing, rooted in the Rose City.</p>
-        <p class="hero-sub">Professional care at honest prices &mdash; on your schedule, at your door.</p>
-        <a href="#contact" class="btn btn-lg">Get a Free Quote</a>
+        <img src="images/rose_city_detailing_logo_pack/rose_city_detailing_luxury_stacked.svg" alt="Rose City Detailing Logo" class="hero-logo">
+        <h1>Car Detailing in Windsor, Ontario</h1>
+        <p class="hero-tagline">Premium mobile detailing at your door. No shortcuts, no hidden fees &mdash; just results you can see.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-lg">Book Your Detail</a>
+          <a href="#work" class="btn btn-lg btn-outline">See Our Work</a>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="hero-scroll-line"></div>
       </div>
     </section>
 
+    <!-- ─── Trust Bar ─── -->
+    <section class="trust-bar">
+      <div class="trust-items">
+        <div class="trust-item">
+          <span class="trust-number">100%</span>
+          <span class="trust-label">Mobile Service</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-number">5&starf;</span>
+          <span class="trust-label">Rated on Google</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-number">Essex</span>
+          <span class="trust-label">County Wide</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-number">CAD</span>
+          <span class="trust-label">Transparent Pricing</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Services ─── -->
     <section id="services" class="services">
-      <div class="section-header">
-        <h2>Our Services</h2>
-        <p class="section-subtitle">From the Rose City to your driveway &mdash; everything your vehicle needs to shine.</p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">&#127801;</div>
-          <h3>Exterior Wash &amp; Wax</h3>
-          <p>Thorough hand wash, clay bar decontamination, and premium wax for a deep clean and lasting shine your neighbours will notice.</p>
+      <div class="container">
+        <div class="section-header">
+          <p class="section-pre">What We Do</p>
+          <h2>Our Services</h2>
+          <p class="section-subtitle">From the Rose City to your driveway &mdash; everything your vehicle needs to shine.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#10024;</div>
-          <h3>Interior Detail</h3>
-          <p>Full vacuum, steam cleaning, leather conditioning, and complete interior sanitization. Your cabin will feel brand new.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">&#128142;</div>
-          <h3>Paint Correction</h3>
-          <p>Multi-stage machine polish to eliminate swirl marks, scratches, and oxidation &mdash; restoring your paint to factory finish.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">&#128737;</div>
-          <h3>Ceramic Coating</h3>
-          <p>Industry-leading ceramic protection that repels water, dirt, and UV damage for years. The ultimate paint investment.</p>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                <path d="M15 30C15 30 18 26 24 26C30 26 33 30 33 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 22L16 18M24 14V20M36 22L32 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Exterior Wash &amp; Wax</h3>
+            <p>Thorough hand wash, clay bar decontamination, and premium carnauba wax for a deep clean and lasting shine.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                <rect x="16" y="16" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M20 22L23 25L28 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Interior Detail</h3>
+            <p>Full vacuum, steam cleaning, leather conditioning, and complete sanitization. Your cabin will feel brand new.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                <path d="M18 30L24 18L30 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20 26H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Paint Correction</h3>
+            <p>Multi-stage machine polish to eliminate swirl marks, scratches, and oxidation &mdash; back to factory finish.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                <path d="M24 16V32M18 20L24 16L30 20M18 28L24 32L30 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Ceramic Coating</h3>
+            <p>Industry-leading ceramic protection that repels water, dirt, and UV damage for years. The ultimate investment.</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- ─── My Work ─── -->
     <section id="work" class="work">
-      <div class="section-header">
-        <h2>My Work</h2>
-        <p class="section-subtitle">Real results on real vehicles. Slide to compare the before and after.</p>
-      </div>
-      <div class="work-grid">
-        <div class="comparison-card">
-          <div class="comparison-slider">
-            <div class="comparison-img-wrapper">
-              <img src="images/Before1.jpg" alt="Dirty Lexus floor mat before car detailing in Windsor" class="comp-before">
-              <div class="comp-after-clip">
-                <img src="images/after1.jpg" alt="Clean Lexus floor mat after professional detailing by Rose City Detailing" class="comp-after">
-              </div>
-              <div class="comp-handle">
-                <div class="comp-handle-line"></div>
-                <div class="comp-handle-circle">
-                  <span>&larr; &rarr;</span>
-                </div>
-                <div class="comp-handle-line"></div>
-              </div>
-            </div>
-            <div class="comp-labels">
-              <span class="comp-label">Before</span>
-              <span class="comp-label">After</span>
-            </div>
-          </div>
+      <div class="container">
+        <div class="section-header">
+          <p class="section-pre">Real Results</p>
+          <h2>Before &amp; After</h2>
+          <p class="section-subtitle">Drag the slider to see the transformation. Every vehicle gets the same level of care.</p>
         </div>
-        <div class="comparison-card">
-          <div class="comparison-slider">
-            <div class="comparison-img-wrapper">
-              <img src="images/before2.jpg" alt="Dirty Lexus passenger footwell before interior detailing" class="comp-before">
-              <div class="comp-after-clip">
-                <img src="images/after2.jpg" alt="Spotless Lexus passenger footwell after interior detail by Rose City Detailing" class="comp-after">
-              </div>
-              <div class="comp-handle">
-                <div class="comp-handle-line"></div>
-                <div class="comp-handle-circle">
-                  <span>&larr; &rarr;</span>
+        <div class="work-grid">
+          <div class="comparison-card">
+            <div class="comparison-slider">
+              <div class="comparison-img-wrapper">
+                <img src="images/Before1.jpg" alt="Dirty Lexus floor mat before car detailing in Windsor" class="comp-before">
+                <div class="comp-after-clip">
+                  <img src="images/after1.jpg" alt="Clean Lexus floor mat after professional detailing by Rose City Detailing" class="comp-after">
                 </div>
-                <div class="comp-handle-line"></div>
+                <div class="comp-handle">
+                  <div class="comp-handle-line"></div>
+                  <div class="comp-handle-circle"><span>&larr; &rarr;</span></div>
+                  <div class="comp-handle-line"></div>
+                </div>
               </div>
             </div>
-            <div class="comp-labels">
-              <span class="comp-label">Before</span>
-              <span class="comp-label">After</span>
-            </div>
+            <div class="comparison-caption">Driver Floor Mat &mdash; Deep Clean</div>
           </div>
-        </div>
-        <div class="comparison-card">
-          <div class="comparison-slider">
-            <div class="comparison-img-wrapper">
-              <img src="images/before3.jpg" alt="Lexus wheel before cleaning and rim detailing" class="comp-before">
-              <div class="comp-after-clip">
-                <img src="images/after3.jpg" alt="Lexus wheel after professional cleaning and shine by Rose City Detailing Windsor" class="comp-after">
-              </div>
-              <div class="comp-handle">
-                <div class="comp-handle-line"></div>
-                <div class="comp-handle-circle">
-                  <span>&larr; &rarr;</span>
+          <div class="comparison-card">
+            <div class="comparison-slider">
+              <div class="comparison-img-wrapper">
+                <img src="images/before2.jpg" alt="Dirty Lexus passenger footwell before interior detailing" class="comp-before">
+                <div class="comp-after-clip">
+                  <img src="images/after2.jpg" alt="Spotless Lexus passenger footwell after interior detail by Rose City Detailing" class="comp-after">
                 </div>
-                <div class="comp-handle-line"></div>
+                <div class="comp-handle">
+                  <div class="comp-handle-line"></div>
+                  <div class="comp-handle-circle"><span>&larr; &rarr;</span></div>
+                  <div class="comp-handle-line"></div>
+                </div>
               </div>
             </div>
-            <div class="comp-labels">
-              <span class="comp-label">Before</span>
-              <span class="comp-label">After</span>
+            <div class="comparison-caption">Passenger Footwell &mdash; Interior Detail</div>
+          </div>
+          <div class="comparison-card">
+            <div class="comparison-slider">
+              <div class="comparison-img-wrapper">
+                <img src="images/before3.jpg" alt="Lexus wheel before cleaning and rim detailing" class="comp-before">
+                <div class="comp-after-clip">
+                  <img src="images/after3.jpg" alt="Lexus wheel after professional cleaning and shine by Rose City Detailing Windsor" class="comp-after">
+                </div>
+                <div class="comp-handle">
+                  <div class="comp-handle-line"></div>
+                  <div class="comp-handle-circle"><span>&larr; &rarr;</span></div>
+                  <div class="comp-handle-line"></div>
+                </div>
+              </div>
             </div>
+            <div class="comparison-caption">Wheel &amp; Rim &mdash; Exterior Detail</div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ─── Pricing ─── -->
     <section id="pricing" class="pricing">
-      <div class="section-header">
-        <h2>Pricing</h2>
-        <p class="section-subtitle">Transparent pricing with no hidden fees. Great value for Windsor and Essex County drivers.</p>
-      </div>
-      <div class="pricing-grid">
-        <div class="price-card">
-          <h3>Exterior</h3>
-          <div class="price">$80</div>
-          <ul>
-            <li>Thorough hand wash</li>
-            <li>Clay bar decontamination</li>
-            <li>Tire &amp; rim shine</li>
-            <li>Window cleaning</li>
-            <li>Carnauba wax application</li>
-          </ul>
-          <a href="#contact" class="btn">Book Exterior</a>
+      <div class="container">
+        <div class="section-header">
+          <p class="section-pre">Simple Pricing</p>
+          <h2>Choose Your Package</h2>
+          <p class="section-subtitle">Transparent pricing with no hidden fees. Great value for Windsor and Essex County.</p>
         </div>
-        <div class="price-card">
-          <h3>Interior</h3>
-          <div class="price">$120</div>
-          <ul>
-            <li>Full vacuum &amp; dust removal</li>
-            <li>Steam cleaning</li>
-            <li>Dashboard &amp; console wipe</li>
-            <li>Leather conditioning</li>
-            <li>Window cleaning</li>
-            <li>Air freshener</li>
-          </ul>
-          <a href="#contact" class="btn">Book Interior</a>
-        </div>
-        <div class="price-card featured">
-          <div class="featured-badge">Best Value</div>
-          <h3>Full Detail</h3>
-          <div class="price">$175</div>
-          <ul>
-            <li>Complete exterior detail</li>
-            <li>Complete interior detail</li>
-            <li>Clay bar &amp; wax</li>
-            <li>Steam clean &amp; conditioning</li>
-            <li>Tire, rim &amp; window shine</li>
-            <li>Save $25 vs. booking separately</li>
-          </ul>
-          <a href="#contact" class="btn">Book Full Detail</a>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <div class="price-header">
+              <h3>Exterior</h3>
+              <div class="price"><span class="price-dollar">$</span>80</div>
+            </div>
+            <ul>
+              <li>Thorough hand wash</li>
+              <li>Clay bar decontamination</li>
+              <li>Tire &amp; rim shine</li>
+              <li>Window cleaning</li>
+              <li>Carnauba wax application</li>
+            </ul>
+            <a href="#contact" class="btn btn-block">Book Exterior</a>
+          </div>
+          <div class="price-card featured">
+            <div class="featured-badge">Best Value</div>
+            <div class="price-header">
+              <h3>Full Detail</h3>
+              <div class="price"><span class="price-dollar">$</span>175</div>
+              <p class="price-save">Save $25 vs. booking separately</p>
+            </div>
+            <ul>
+              <li>Complete exterior detail</li>
+              <li>Complete interior detail</li>
+              <li>Clay bar &amp; wax</li>
+              <li>Steam clean &amp; conditioning</li>
+              <li>Tire, rim &amp; window shine</li>
+            </ul>
+            <a href="#contact" class="btn btn-block">Book Full Detail</a>
+          </div>
+          <div class="price-card">
+            <div class="price-header">
+              <h3>Interior</h3>
+              <div class="price"><span class="price-dollar">$</span>120</div>
+            </div>
+            <ul>
+              <li>Full vacuum &amp; dust removal</li>
+              <li>Steam cleaning</li>
+              <li>Dashboard &amp; console wipe</li>
+              <li>Leather conditioning</li>
+              <li>Window cleaning</li>
+              <li>Air freshener</li>
+            </ul>
+            <a href="#contact" class="btn btn-block">Book Interior</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="contact">
-      <div class="section-header">
-        <h2>Book an Appointment</h2>
-        <p class="section-subtitle">Serving Windsor, Tecumseh, LaSalle, Lakeshore, and all of Essex County. Pick a time that works for you.</p>
+    <!-- ─── Why Us ─── -->
+    <section class="why-us">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-pre">Why Rose City</p>
+          <h2>The Rose City Difference</h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-item">
+            <div class="why-num">01</div>
+            <h3>We Come to You</h3>
+            <p>No need to drop off your car. We bring our full setup to your home or office anywhere in Windsor and Essex County.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-num">02</div>
+            <h3>Honest Pricing</h3>
+            <p>What you see is what you pay. No upsells, no surprise charges. Straightforward packages at fair prices.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-num">03</div>
+            <h3>Attention to Detail</h3>
+            <p>Every vehicle gets the same meticulous care. We don&rsquo;t rush. We don&rsquo;t cut corners. That&rsquo;s the Rose City standard.</p>
+          </div>
+        </div>
       </div>
-      <div class="cal-embed">
-        <iframe
-          src="https://cal.com/rosecitydetailing?embed=true&theme=auto"
-          frameborder="0"
-          width="100%"
-          height="700"
-          style="min-height:600px; border-radius:12px;"
-          loading="lazy"
-        ></iframe>
+    </section>
+
+    <!-- ─── Booking ─── -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-pre">Ready?</p>
+          <h2>Book Your Appointment</h2>
+          <p class="section-subtitle">Serving Windsor, Tecumseh, LaSalle, Lakeshore, and all of Essex County. Pick a time that works for you.</p>
+        </div>
+        <div class="cal-embed">
+          <iframe
+            src="https://cal.com/rosecitydetailing?embed=true&theme=auto"
+            frameborder="0"
+            width="100%"
+            height="700"
+            style="min-height:600px; border-radius:12px;"
+            loading="lazy"
+          ></iframe>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-content">
-      <img src="images/rose_city_detailing_logo_pack/rose_city_detailing_luxury_horizontal_white.svg" alt="Rose City Detailing" class="footer-logo">
-      <p>Proudly rooted in Windsor &mdash; the Rose City &mdash; serving all of Essex County.</p>
-      <p class="footer-copy">&copy; 2026 Rose City Detailing. All rights reserved.</p>
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <img src="images/rose_city_detailing_logo_pack/rose_city_detailing_luxury_stacked.svg" alt="Rose City Detailing" class="footer-logo">
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#work">Results</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Book Now</a>
+      </div>
+      <div class="footer-bottom">
+        <p>Proudly rooted in Windsor &mdash; the Rose City &mdash; serving all of Essex County.</p>
+        <p class="footer-copy">&copy; 2026 Rose City Detailing. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
