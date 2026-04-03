@@ -134,10 +134,29 @@ document.querySelectorAll('.comparison-slider').forEach((slider) => {
     document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
+  // Disable Step 3 Next button by default
+  const step3Next = document.querySelector('#step-3 .btn-next');
+  step3Next.disabled = true;
+
+  // Listen for Cal.com booking confirmation
+  window.addEventListener('message', (e) => {
+    if (e.origin !== 'https://cal.com') return;
+    let data = e.data;
+    if (typeof data === 'string') {
+      try { data = JSON.parse(data); } catch (_) { return; }
+    }
+    // Cal.com sends this when booking is completed
+    if (data.type === 'CAL:bookingSuccessful' || data.type === '__routeChanged' && data.data?.url?.includes('/booking/')) {
+      step3Next.disabled = false;
+      goToStep(4);
+    }
+  });
+
   // Next/Back buttons
   document.querySelectorAll('.btn-next').forEach(btn => {
     btn.addEventListener('click', () => {
       if (currentStep === 1 && !selectedPackage) return;
+      if (currentStep === 3 && step3Next.disabled) return;
       goToStep(currentStep + 1);
     });
   });

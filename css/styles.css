@@ -685,6 +685,12 @@ nav {
 }
 .btn-pay:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(181,49,74,0.3); }
 
+.step-hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
 /* Package cards */
 .package-grid {
   display: grid;
