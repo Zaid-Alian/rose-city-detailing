@@ -502,6 +502,66 @@ nav {
   line-height: 1.8;
 }
 
+/* ─── Reviews ─── */
+.reviews { padding: 7rem 0; background: var(--bg); }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.review-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border);
+  transition: box-shadow 0.3s;
+}
+.review-card:hover { box-shadow: var(--card-hover); }
+
+.review-stars {
+  color: #f5a623;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.review-text {
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  font-style: italic;
+}
+
+.review-author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.review-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.reviews-cta {
+  text-align: center;
+  padding-top: 1rem;
+}
+.reviews-cta p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
 /* ─── Contact ─── */
 .contact { padding: 7rem 0; background: var(--bg); }
 
@@ -590,6 +650,7 @@ footer {
   .work-grid { grid-template-columns: 1fr; }
   .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
   .why-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .reviews-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
 
   .trust-items { gap: 1.5rem; }
   .trust-divider { display: none; }
