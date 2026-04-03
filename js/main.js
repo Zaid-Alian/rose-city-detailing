@@ -138,17 +138,30 @@ document.querySelectorAll('.comparison-slider').forEach((slider) => {
   const step3Next = document.querySelector('#step-3 .btn-next');
   step3Next.disabled = true;
 
-  // Listen for Cal.com booking confirmation
+  // Listen for Cal.com booking confirmation via postMessage
   window.addEventListener('message', (e) => {
-    if (e.origin !== 'https://cal.com') return;
     let data = e.data;
     if (typeof data === 'string') {
       try { data = JSON.parse(data); } catch (_) { return; }
     }
-    // Cal.com sends this when booking is completed
-    if (data.type === 'CAL:bookingSuccessful' || data.type === '__routeChanged' && data.data?.url?.includes('/booking/')) {
+    if (!data || typeof data !== 'object') return;
+
+    // Debug: log all messages from Cal.com iframe (remove after testing)
+    console.log('postMessage received:', JSON.stringify(data).substring(0, 300));
+
+    // Deeply search the message for booking success signals
+    const str = JSON.stringify(data).toLowerCase();
+    if (str.includes('bookingsuccessful') || str.includes('booking_successful')) {
       step3Next.disabled = false;
       goToStep(4);
+      return;
+    }
+    // Check for route change to booking confirmation page
+    if (str.includes('routechanged') || str.includes('route_changed')) {
+      if (str.includes('/booking/')) {
+        step3Next.disabled = false;
+        goToStep(4);
+      }
     }
   });
 
