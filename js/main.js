@@ -76,3 +76,159 @@ document.querySelectorAll('.comparison-slider').forEach((slider) => {
     isDragging = false;
   });
 });
+
+// ─── Booking System ───
+(function() {
+  const steps = document.querySelectorAll('.booking-step');
+  const progressSteps = document.querySelectorAll('.progress-step');
+  const progressLines = document.querySelectorAll('.progress-line');
+  let currentStep = 1;
+
+  // State
+  let selectedPackage = null;
+  let selectedAddons = [];
+
+  const packageNames = {
+    exterior: 'Exterior Detail',
+    interior: 'Interior Detail',
+    full: 'Full Detail'
+  };
+
+  const calUrls = {
+    exterior: 'https://cal.com/rosecitydetailing/exterior-wash?embed=true&theme=auto',
+    interior: 'https://cal.com/rosecitydetailing/interior-wash?embed=true&theme=auto',
+    full: 'https://cal.com/rosecitydetailing/full-detail?embed=true&theme=auto'
+  };
+
+  // ─── Step Navigation ───
+  function goToStep(n) {
+    steps.forEach(s => s.classList.remove('active'));
+    document.getElementById('step-' + n).classList.add('active');
+
+    progressSteps.forEach(ps => {
+      const stepNum = parseInt(ps.dataset.step);
+      ps.classList.remove('active', 'done');
+      if (stepNum === n) ps.classList.add('active');
+      if (stepNum < n) ps.classList.add('done');
+    });
+
+    progressLines.forEach((line, i) => {
+      line.classList.toggle('done', i < n - 1);
+    });
+
+    currentStep = n;
+
+    // Load correct Cal.com event when entering step 3
+    if (n === 3 && selectedPackage) {
+      const iframe = document.getElementById('cal-iframe');
+      const targetUrl = calUrls[selectedPackage.name];
+      if (iframe.src !== targetUrl) {
+        iframe.src = targetUrl;
+      }
+    }
+
+    // Update summary when entering step 4
+    if (n === 4) updateSummary();
+
+    // Scroll to booking section
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // Next/Back buttons
+  document.querySelectorAll('.btn-next').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (currentStep === 1 && !selectedPackage) return;
+      goToStep(currentStep + 1);
+    });
+  });
+
+  document.querySelectorAll('.btn-back').forEach(btn => {
+    btn.addEventListener('click', () => {
+      goToStep(currentStep - 1);
+    });
+  });
+
+  // ─── Step 1: Package Selection ───
+  const packageOptions = document.querySelectorAll('.package-option');
+  const step1Next = document.querySelector('#step-1 .btn-next');
+
+  packageOptions.forEach(opt => {
+    opt.addEventListener('click', () => {
+      packageOptions.forEach(o => o.classList.remove('selected'));
+      opt.classList.add('selected');
+      selectedPackage = {
+        name: opt.dataset.package,
+        price: parseInt(opt.dataset.price)
+      };
+      step1Next.disabled = false;
+      updateRunningTotal();
+    });
+  });
+
+  // ─── Step 2: Add-ons ───
+  const addonCheckboxes = document.querySelectorAll('input[name="addon"]');
+
+  addonCheckboxes.forEach(cb => {
+    cb.addEventListener('change', () => {
+      selectedAddons = [];
+      addonCheckboxes.forEach(c => {
+        if (c.checked) {
+          selectedAddons.push({
+            name: c.value,
+            price: parseInt(c.dataset.price)
+          });
+        }
+      });
+      updateRunningTotal();
+    });
+  });
+
+  // ─── Running Total ───
+  function getTotal() {
+    let total = selectedPackage ? selectedPackage.price : 0;
+    selectedAddons.forEach(a => total += a.price);
+    return total;
+  }
+
+  function updateRunningTotal() {
+    const el = document.querySelector('.running-total');
+    if (el) el.textContent = '$' + getTotal();
+  }
+
+  // ─── Step 4: Summary ───
+  const addonDisplayNames = {
+    'pet-hair': 'Pet Hair Removal',
+    'clay-bar': 'Clay Bar Treatment',
+    'engine-bay': 'Engine Bay Cleaning'
+  };
+
+  function updateSummary() {
+    const total = getTotal();
+    const deposit = Math.ceil(total * 0.25);
+
+    document.getElementById('summary-package').textContent =
+      selectedPackage ? packageNames[selectedPackage.name] : '—';
+    document.getElementById('summary-package-price').textContent =
+      selectedPackage ? '$' + selectedPackage.price : '$0';
+
+    const addonsEl = document.getElementById('summary-addons');
+    if (selectedAddons.length === 0) {
+      addonsEl.innerHTML = '<div class="summary-row summary-muted">No add-ons selected</div>';
+    } else {
+      addonsEl.innerHTML = selectedAddons.map(a =>
+        '<div class="summary-row"><span>' + addonDisplayNames[a.name] + '</span><span>+$' + a.price + '</span></div>'
+      ).join('');
+    }
+
+    document.getElementById('summary-total').textContent = '$' + total;
+    document.getElementById('summary-deposit').textContent = '$' + deposit;
+    document.getElementById('btn-deposit-amount').textContent = '$' + deposit;
+  }
+
+  // ─── Pay Button (placeholder) ───
+  document.getElementById('btn-pay').addEventListener('click', () => {
+    const total = getTotal();
+    const deposit = Math.ceil(total * 0.25);
+    alert('Stripe integration coming soon!\n\nDeposit amount: $' + deposit + '\nThis will redirect to Stripe Checkout.');
+  });
+})();
