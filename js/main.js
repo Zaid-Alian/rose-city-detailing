@@ -25,12 +25,14 @@ const navLinks = document.querySelector('.nav-links');
 menuBtn.addEventListener('click', () => {
   const isOpen = navLinks.classList.toggle('active');
   menuBtn.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+  document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
 navLinks.addEventListener('click', (e) => {
   if (e.target.tagName === 'A') {
     navLinks.classList.remove('active');
     menuBtn.innerHTML = '&#9776;';
+    document.body.style.overflow = '';
   }
 });
 

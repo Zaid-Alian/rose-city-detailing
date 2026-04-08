@@ -98,6 +98,7 @@ nav {
   gap: 2rem;
   align-items: center;
 }
+.nav-menu-logo { display: none; }
 
 .nav-links a {
   color: rgba(255,255,255,0.7);
@@ -1022,17 +1023,81 @@ footer {
   .nav-links {
     display: none;
     position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
+    top: 1rem;
+    left: 1rem;
+    width: calc(100vw - 2rem);
+    height: calc(100vh - 2rem);
+    height: calc(100svh - 2rem);
+    max-width: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2.5rem;
-    background: #1a1218;
+    gap: 1.5rem;
+    background: rgba(14, 10, 13, 0.94);
+    backdrop-filter: blur(28px) saturate(180%);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
+    border-radius: 32px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
     z-index: 999;
+    padding: 2rem;
+    animation: menuFadeIn 0.3s ease-out;
   }
   .nav-links.active { display: flex; }
-  .nav-links a { font-size: 1.4rem; font-weight: 600; color: #fff; }
+  .nav-links li {
+    list-style: none;
+    display: block;
+    text-align: center;
+  }
+  .nav-menu-logo {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  .nav-menu-logo img {
+    width: 85px;
+    height: 85px;
+    display: block;
+    opacity: 0.95;
+  }
+  .nav-links a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0.25rem 0;
+    transition: all 0.3s;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: all 0.3s;
+    transform: translateX(-50%);
+  }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-links .nav-cta {
+    background: var(--accent);
+    padding: 0.85rem 2.25rem;
+    border-radius: 30px;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+  }
+  .nav-links .nav-cta::after { display: none; }
+  .nav-links .nav-cta:hover { background: var(--accent-hover); color: #fff; }
+
+  @keyframes menuFadeIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
   .mobile-menu-btn { z-index: 1000; }
 
   h2 { font-size: 2rem; }
