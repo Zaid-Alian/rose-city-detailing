@@ -183,6 +183,33 @@ document.querySelectorAll('.comparison-slider').forEach((slider) => {
   const packageOptions = document.querySelectorAll('.package-option');
   const step1Next = document.querySelector('#step-1 .btn-next');
 
+  // Add-ons that are only valid with interior-inclusive packages
+  const interiorOnlyAddons = ['deep-interior'];
+
+  function applyAddonGating() {
+    const isExterior = selectedPackage && selectedPackage.name === 'exterior';
+    document.querySelectorAll('input[name="addon"]').forEach(cb => {
+      const label = cb.closest('.addon-option');
+      if (interiorOnlyAddons.includes(cb.value)) {
+        if (isExterior) {
+          if (cb.checked) cb.checked = false;
+          cb.disabled = true;
+          if (label) label.classList.add('disabled');
+        } else {
+          cb.disabled = false;
+          if (label) label.classList.remove('disabled');
+        }
+      }
+    });
+    // Re-sync selectedAddons after possible unchecks
+    selectedAddons = [];
+    document.querySelectorAll('input[name="addon"]').forEach(c => {
+      if (c.checked) {
+        selectedAddons.push({ name: c.value, price: parseInt(c.dataset.price) });
+      }
+    });
+  }
+
   packageOptions.forEach(opt => {
     opt.addEventListener('click', () => {
       packageOptions.forEach(o => o.classList.remove('selected'));
@@ -192,6 +219,7 @@ document.querySelectorAll('.comparison-slider').forEach((slider) => {
         price: parseInt(opt.dataset.price)
       };
       step1Next.disabled = false;
+      applyAddonGating();
       updateRunningTotal();
     });
   });
@@ -229,6 +257,7 @@ document.querySelectorAll('.comparison-slider').forEach((slider) => {
   // ─── Step 4: Summary ───
   const addonDisplayNames = {
     'deep-interior': 'Deep Interior Clean',
+    'headlight': 'Headlight Restoration',
     'engine-bay': 'Engine Bay Cleaning'
   };
 
