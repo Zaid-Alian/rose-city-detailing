@@ -228,8 +228,7 @@ document.querySelectorAll('.comparison-slider').forEach((slider) => {
 
   // ─── Step 4: Summary ───
   const addonDisplayNames = {
-    'pet-hair': 'Pet Hair Removal',
-    'clay-bar': 'Clay Bar Treatment',
+    'deep-interior': 'Deep Interior Clean',
     'engine-bay': 'Engine Bay Cleaning'
   };
 
