@@ -263,7 +263,6 @@ document.querySelectorAll('.comparison-slider').forEach((slider) => {
 
   function updateSummary() {
     const total = getTotal();
-    const deposit = Math.ceil(total * 0.25);
 
     document.getElementById('summary-package').textContent =
       selectedPackage ? packageNames[selectedPackage.name] : '—';
@@ -280,14 +279,5 @@ document.querySelectorAll('.comparison-slider').forEach((slider) => {
     }
 
     document.getElementById('summary-total').textContent = '$' + total;
-    document.getElementById('summary-deposit').textContent = '$' + deposit;
-    document.getElementById('btn-deposit-amount').textContent = '$' + deposit;
   }
-
-  // ─── Pay Button (placeholder) ───
-  document.getElementById('btn-pay').addEventListener('click', () => {
-    const total = getTotal();
-    const deposit = Math.ceil(total * 0.25);
-    alert('Stripe integration coming soon!\n\nDeposit amount: $' + deposit + '\nThis will redirect to Stripe Checkout.');
-  });
 })();
