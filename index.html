@@ -38,7 +38,7 @@
     "name": "Rose City Detailing",
     "url": "https://rosecitydetailing.com",
     "logo": "https://rosecitydetailing.com/images/rose_city_detailing_logo_pack/rose_city_detailing_luxury_horizontal.png",
-    "telephone": "+1-519-996-7732",
+    "email": "rosecitydetailing519@gmail.com",
     "description": "Professional mobile car detailing service in Windsor, Ontario. Exterior wash, interior detail, and full detail packages.",
     "areaServed": [
       {"@type": "City", "name": "Windsor", "addressRegion": "ON", "addressCountry": "CA"},
@@ -589,6 +589,37 @@
         </div>
       </div>
     </section>
+    <!-- ─── Contact Form ─── -->
+    <section id="contact-form" class="contact-form-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-pre">Get In Touch</p>
+          <h2>Have a Question?</h2>
+          <p class="section-subtitle">Send us a message and we&rsquo;ll get back to you as soon as possible.</p>
+        </div>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="dc8f06a0-4e9c-4b7e-8c83-adc301bd7bf1">
+          <input type="hidden" name="subject" value="New message from Rose City Detailing website">
+          <input type="hidden" name="from_name" value="Rose City Detailing Website">
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
+          <div class="form-row">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" required placeholder="Your full name">
+          </div>
+          <div class="form-row">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="form-row">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" required rows="5" placeholder="How can we help?"></textarea>
+          </div>
+          <div class="form-status" id="form-status"></div>
+          <button type="submit" class="btn btn-block">Send Message</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -606,7 +637,7 @@
       </div>
       <div class="footer-bottom">
         <p class="footer-contact">
-          Questions? Call or text <a href="tel:+15199967732">(519) 996-7732</a>
+          Questions? <a href="#contact-form">Send us a message</a>
         </p>
         <p>Proudly rooted in Windsor &mdash; the Rose City &mdash; serving all of Essex County.</p>
         <p class="footer-badges">

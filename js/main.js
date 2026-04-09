@@ -281,3 +281,39 @@ document.querySelectorAll('.comparison-slider').forEach((slider) => {
     document.getElementById('summary-total').textContent = '$' + total;
   }
 })();
+
+// ─── Contact Form (Web3Forms) ───
+(function() {
+  const form = document.querySelector('.contact-form');
+  if (!form) return;
+  const status = document.getElementById('form-status');
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = 'Sending…';
+    status.className = 'form-status sending';
+    submitBtn.disabled = true;
+
+    try {
+      const formData = new FormData(form);
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+      const data = await res.json();
+      if (data.success) {
+        status.textContent = 'Message sent! We\u2019ll get back to you soon.';
+        status.className = 'form-status success';
+        form.reset();
+      } else {
+        throw new Error(data.message || 'Submission failed');
+      }
+    } catch (err) {
+      status.textContent = 'Something went wrong. Please try again or email rosecitydetailing519@gmail.com directly.';
+      status.className = 'form-status error';
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+})();
