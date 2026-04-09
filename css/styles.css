@@ -834,6 +834,7 @@ nav {
   background: var(--accent-soft);
   box-shadow: 0 0 0 1px var(--accent);
 }
+.addon-info { flex: 1; min-width: 0; }
 .addon-info h4 {
   font-size: 1rem;
   font-weight: 700;
