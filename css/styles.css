@@ -1186,3 +1186,18 @@ footer {
   .contact-form-section { padding: 4rem 0; }
   .contact-form { padding: 1.75rem; }
 }
+
+/* ─── Footer Socials ─── */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.footer-socials a {
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+.footer-socials a:hover {
+  color: var(--accent);
+}
