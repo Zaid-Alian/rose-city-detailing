@@ -3,7 +3,10 @@
     "allow": [
       "WebSearch",
       "Bash(gh auth:*)",
-      "Bash(winget install:*)"
+      "Bash(winget install:*)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\nTime: %{time_total}s\\\\n\" https://rosecitydetailing.com/)",
+      "Bash(mkdir -p /c/Users/ZA/.claude/hooks)",
+      "Read(//c/Users/ZA/.claude/**)"
     ]
   }
 }
