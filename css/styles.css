@@ -235,8 +235,8 @@ nav {
 }
 .btn:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(181,49,74,0.3); }
 .btn-lg { padding: 1rem 2.75rem; font-size: 0.95rem; }
-.btn-outline { background: transparent; border: 2px solid rgba(255,255,255,0.25); }
-.btn-outline:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.5); box-shadow: none; }
+.btn-outline { background: transparent; color: var(--text); border: 2px solid var(--border); }
+.btn-outline:hover { background: transparent; border-color: var(--text); box-shadow: none; transform: translateY(-2px); }
 .btn-block { display: block; width: 100%; text-align: center; }
 
 .hero-scroll {
@@ -565,6 +565,8 @@ nav {
 
 /* ─── Booking ─── */
 .booking { padding: 7rem 0; background: var(--bg-alt); }
+.book-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2.5rem; }
+.book-note { text-align: center; margin-top: 1.25rem; color: var(--text-muted); font-size: 0.9rem; }
 
 /* Progress bar */
 .booking-progress {
@@ -863,6 +865,22 @@ nav {
   border-style: dashed;
 }
 .addon-option.disabled .addon-checkbox { display: none; }
+
+/* Add-ons display (pricing section) */
+.addons-section { margin-top: 4rem; }
+.addons-header { margin-bottom: 1.5rem; }
+.addons-header h3 { font-size: 1.75rem; }
+.addons-display {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.addon-card--coming-soon {
+  opacity: 0.45;
+  border-style: dashed;
+}
 
 .coming-soon-tag {
   display: inline-block;
