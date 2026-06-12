@@ -55,14 +55,6 @@ h2 {
 }
 
 .section-header { text-align: center; margin-bottom: 4rem; }
-.section-pre {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  color: var(--accent);
-  margin-bottom: 0.75rem;
-}
 .section-subtitle {
   font-size: 1.1rem;
   color: var(--text-muted);
@@ -91,6 +83,12 @@ nav {
 }
 
 .logo-img { height: 75px; width: auto; }
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 
 .nav-links {
   display: flex;
@@ -154,10 +152,8 @@ nav {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
   color: #fff;
-  padding: 6rem 2rem 4rem;
+  padding: 8rem 2rem 4rem;
   position: relative;
   overflow: hidden;
 }
@@ -184,10 +180,22 @@ nav {
   border-radius: 50%;
 }
 
-.hero-content { position: relative; z-index: 1; max-width: 700px; }
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-content { text-align: left; }
 
 .hero-logo {
-  width: 220px;
+  width: 180px;
   height: auto;
   margin-bottom: 2rem;
   filter: brightness(0) invert(1);
@@ -196,11 +204,20 @@ nav {
 [data-theme="dark"] .hero-logo { filter: brightness(0) invert(1); }
 
 .hero-content h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 4.25rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+.hero-location {
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   margin-bottom: 1.5rem;
   opacity: 0.5;
 }
@@ -212,11 +229,22 @@ nav {
   font-weight: 300;
   margin-bottom: 2.5rem;
   max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.hero-actions { display: flex; gap: 1rem; justify-content: flex-start; flex-wrap: wrap; }
+
+.hero-image {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
 
 .btn {
   display: inline-block;
@@ -237,6 +265,9 @@ nav {
 .btn-lg { padding: 1rem 2.75rem; font-size: 0.95rem; }
 .btn-outline { background: transparent; color: var(--text); border: 2px solid var(--border); }
 .btn-outline:hover { background: transparent; border-color: var(--text); box-shadow: none; transform: translateY(-2px); }
+
+.hero .btn-outline { color: #fff; border-color: rgba(255,255,255,0.35); }
+.hero .btn-outline:hover { border-color: #fff; }
 .btn-block { display: block; width: 100%; text-align: center; }
 
 .hero-scroll {
@@ -249,12 +280,6 @@ nav {
   align-items: center;
   gap: 0.5rem;
   z-index: 1;
-}
-.hero-scroll span {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: rgba(255,255,255,0.3);
 }
 .hero-scroll-line {
   width: 1px;
@@ -503,6 +528,25 @@ nav {
   line-height: 1.8;
 }
 
+/* ─── Service Area ─── */
+.service-area { padding: 5rem 0; background: var(--bg); }
+.area-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.area-list span {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
 /* ─── Reviews ─── */
 .reviews { padding: 7rem 0; background: var(--bg); }
 
@@ -540,8 +584,21 @@ nav {
 
 .review-author {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 0.75rem;
+}
+.review-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
 }
 .review-name {
   font-weight: 600;
@@ -550,6 +607,24 @@ nav {
 }
 .review-date {
   font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.google-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+.google-rating-stars {
+  color: #f5a623;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+.google-rating-text {
+  font-size: 0.9rem;
+  font-weight: 600;
   color: var(--text-muted);
 }
 
@@ -1121,10 +1196,19 @@ footer {
 
   h2 { font-size: 2rem; }
 
-  .hero { min-height: 100vh; padding: 8rem 1.5rem 4rem; }
+  .hero { min-height: auto; padding: 8rem 1.5rem 4rem; }
+  .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero-content { text-align: center; }
+  .hero-content h1 { font-size: 2.75rem; }
   .hero-logo { width: 160px; }
-  .hero-tagline { font-size: 1.05rem; }
+  .hero-location { text-align: center; }
+  .hero-tagline { font-size: 1.05rem; margin-left: auto; margin-right: auto; }
+  .hero-actions { justify-content: center; }
+  .hero-image { order: -1; max-width: 380px; margin: 0 auto; width: 100%; }
   .hero-scroll { display: none; }
+
+  .area-list { gap: 0.5rem; }
+  .instagram-grid { gap: 0.5rem; }
 
   .services-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
   .work-grid { grid-template-columns: 1fr; }
@@ -1204,6 +1288,31 @@ footer {
   .contact-form-section { padding: 4rem 0; }
   .contact-form { padding: 1.75rem; }
 }
+
+/* ─── Instagram Feed ─── */
+.instagram-feed { padding: 6rem 0; background: var(--bg-alt); }
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+.instagram-item {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+.instagram-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s;
+}
+.instagram-item:hover img { transform: scale(1.06); }
+.instagram-cta { text-align: center; }
 
 /* ─── Footer Socials ─── */
 .footer-socials {

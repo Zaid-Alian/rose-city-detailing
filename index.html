@@ -90,16 +90,16 @@
       <a href="#home" class="logo">
         <img src="images/rose_city_detailing_logo_pack/rose_city_detailing_luxury_icon_white.svg" alt="Rose City Detailing" class="logo-img">
       </a>
-      <ul class="nav-links">
-        <li class="nav-menu-logo"><img src="images/rose_city_detailing_logo_pack/rose_city_detailing_luxury_icon_white.svg" alt="Rose City Detailing"></li>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#work">Results</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#contact" class="nav-cta">Book Now</a></li>
-      </ul>
-      <div style="display:flex;align-items:center;gap:0.75rem;">
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li class="nav-menu-logo"><img src="images/rose_city_detailing_logo_pack/rose_city_detailing_luxury_icon_white.svg" alt="Rose City Detailing"></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Results</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact" class="nav-cta">Book Now</a></li>
+        </ul>
         <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button>
         <button class="mobile-menu-btn" aria-label="Toggle menu">&#9776;</button>
       </div>
@@ -109,17 +109,23 @@
   <main>
     <!-- ─── Hero ─── -->
     <section id="home" class="hero">
-      <div class="hero-content">
-        <img src="images/rose_city_detailing_logo_pack/rose_city_detailing_luxury_stacked.svg" alt="Rose City Detailing Logo" class="hero-logo" width="220" height="257">
-        <h1>Car Detailing in Windsor, Ontario</h1>
-        <p class="hero-tagline">Premium mobile detailing at your door. No shortcuts, no hidden fees &mdash; just results you can see.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-lg">Book Your Detail</a>
-          <a href="#work" class="btn btn-lg btn-outline">See Our Work</a>
+      <div class="hero-grid">
+        <div class="hero-content">
+          <img src="images/rose_city_detailing_logo_pack/rose_city_detailing_luxury_stacked.svg" alt="Rose City Detailing Logo" class="hero-logo" width="220" height="257">
+          <h1>Detail Done Right.</h1>
+          <p class="hero-location">Mobile Car Detailing &mdash; Windsor, Ontario</p>
+          <p class="hero-tagline">Premium mobile detailing at your door. No shortcuts, no hidden fees &mdash; just results you can see.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-lg">Book Your Detail</a>
+            <a href="#work" class="btn btn-lg btn-outline">See Our Work</a>
+          </div>
+        </div>
+        <!-- TODO: Replace with a real photo of a polished car or Zaid working -->
+        <div class="hero-image">
+          <img src="images/after3.jpg" alt="Freshly detailed wheel and rim shine by Rose City Detailing" width="600" height="600">
         </div>
       </div>
       <div class="hero-scroll">
-        <span>Scroll</span>
         <div class="hero-scroll-line"></div>
       </div>
     </section>
@@ -148,7 +154,6 @@
     <section id="services" class="services">
       <div class="container">
         <div class="section-header">
-          <p class="section-pre">What We Do</p>
           <h2>Our Services</h2>
           <p class="section-subtitle">From the Rose City to your driveway &mdash; everything your vehicle needs to shine.</p>
         </div>
@@ -204,7 +209,6 @@
     <section id="work" class="work">
       <div class="container">
         <div class="section-header">
-          <p class="section-pre">Real Results</p>
           <h2>Before &amp; After</h2>
           <p class="section-subtitle">Drag the slider to see the transformation. Every vehicle gets the same level of care.</p>
         </div>
@@ -265,7 +269,6 @@
     <section id="pricing" class="pricing">
       <div class="container">
         <div class="section-header">
-          <p class="section-pre">Simple Pricing</p>
           <h2>Choose Your Package</h2>
           <p class="section-subtitle">Our base packages deliver a thorough professional clean at an honest price &mdash; ideal for regular maintenance. For heavily soiled interiors, pet hair, or stubborn stains, add our Deep Interior Clean. Paint correction, ceramic coating, and more coming soon.</p>
         </div>
@@ -283,6 +286,19 @@
             </ul>
             <a href="#contact" class="btn btn-block">Book Exterior</a>
           </div>
+          <div class="price-card">
+            <div class="price-header">
+              <h3>Interior</h3>
+              <div class="price"><span class="price-dollar">$</span>120</div>
+            </div>
+            <ul>
+              <li>Full vacuum &amp; dust removal</li>
+              <li>Dashboard &amp; console wipe</li>
+              <li>Leather conditioning</li>
+              <li>Window cleaning</li>
+            </ul>
+            <a href="#contact" class="btn btn-block">Book Interior</a>
+          </div>
           <div class="price-card featured">
             <div class="featured-badge">Best Value</div>
             <div class="price-header">
@@ -299,25 +315,11 @@
             </ul>
             <a href="#contact" class="btn btn-block">Book Full Detail</a>
           </div>
-          <div class="price-card">
-            <div class="price-header">
-              <h3>Interior</h3>
-              <div class="price"><span class="price-dollar">$</span>120</div>
-            </div>
-            <ul>
-              <li>Full vacuum &amp; dust removal</li>
-              <li>Dashboard &amp; console wipe</li>
-              <li>Leather conditioning</li>
-              <li>Window cleaning</li>
-            </ul>
-            <a href="#contact" class="btn btn-block">Book Interior</a>
-          </div>
         </div>
 
         <!-- Add-ons -->
         <div class="addons-section">
           <div class="section-header addons-header">
-            <p class="section-pre">Customize Your Detail</p>
             <h3>Add-Ons</h3>
             <p class="section-subtitle">Mention any add-ons when you call or text to book.</p>
           </div>
@@ -373,7 +375,6 @@
     <section class="why-us">
       <div class="container">
         <div class="section-header">
-          <p class="section-pre">Why Rose City</p>
           <h2>The Rose City Difference</h2>
         </div>
         <div class="why-grid">
@@ -396,12 +397,35 @@
       </div>
     </section>
 
+    <!-- ─── Service Area ─── -->
+    <section class="service-area">
+      <div class="container">
+        <div class="section-header">
+          <h2>Where We Work</h2>
+          <p class="section-subtitle">Proudly serving neighbourhoods across Windsor, Ontario.</p>
+        </div>
+        <div class="area-list">
+          <span>Walkerville</span>
+          <span>Riverside</span>
+          <span>South Windsor</span>
+          <span>Old Sandwich Town</span>
+          <span>Fontainebleau</span>
+          <span>Forest Glade</span>
+          <span>Devonshire</span>
+          <span>Remington Park</span>
+        </div>
+      </div>
+    </section>
+
     <!-- ─── Reviews ─── -->
     <section id="reviews" class="reviews">
       <div class="container">
         <div class="section-header">
-          <p class="section-pre">What Customers Say</p>
           <h2>Google Reviews</h2>
+          <div class="google-rating">
+            <span class="google-rating-stars">&starf;&starf;&starf;&starf;&starf;</span>
+            <span class="google-rating-text">5.0 on Google</span>
+          </div>
           <p class="section-subtitle">Real reviews from real customers on Google.</p>
         </div>
         <div class="reviews-grid">
@@ -409,6 +433,7 @@
             <div class="review-stars">&starf;&starf;&starf;&starf;&starf;</div>
             <p class="review-text">&ldquo;Just got my car detailed by Rose City Detailing and honestly couldn&rsquo;t be happier. The attention to detail was impressive, everything from the interior to the exterior looked better than I expected. You can tell this isn&rsquo;t just a job for Zaid, he actually cares about the result. My car came back looking better than it has in years. If you&rsquo;re on the fence, don&rsquo;t be. Highly recommend and will absolutely be back.&rdquo;</p>
             <div class="review-author">
+              <div class="review-avatar">NV</div>
               <span class="review-name">Nico Verrelli</span>
             </div>
           </div>
@@ -416,6 +441,7 @@
             <div class="review-stars">&starf;&starf;&starf;&starf;&starf;</div>
             <p class="review-text">&ldquo;I had my 2025 Corvette C8 and 2025 Alfa Romeo Tonale detailed by Rose City Detailing, and I can honestly say it&rsquo;s the best detailing job I&rsquo;ve ever seen. The level of care, precision, and pride they put into their work is on another level. Both vehicles look better than the day I picked them up. Professional, friendly, meticulous, and worth every penny. Highly recommend.&rdquo;</p>
             <div class="review-author">
+              <div class="review-avatar">VG</div>
               <span class="review-name">Vincenzo Gervasi</span>
             </div>
           </div>
@@ -423,6 +449,7 @@
             <div class="review-stars">&starf;&starf;&starf;&starf;&starf;</div>
             <p class="review-text">&ldquo;Zaid came and detailed my Chevy Blazer and I can&rsquo;t stop talking about it! My car looks brand new and smells so fresh. Zaid was super easy to work with and was super reliable and easy to book a time to get my car done!&rdquo;</p>
             <div class="review-author">
+              <div class="review-avatar">BB</div>
               <span class="review-name">Briana B</span>
             </div>
           </div>
@@ -438,7 +465,6 @@
     <section id="contact" class="booking">
       <div class="container">
         <div class="section-header">
-          <p class="section-pre">Ready?</p>
           <h2>Book Your Appointment</h2>
           <p class="section-subtitle">Call or text and we&rsquo;ll get you scheduled. Serving Windsor, Ontario.</p>
         </div>
@@ -453,7 +479,6 @@
     <section id="contact-form" class="contact-form-section">
       <div class="container">
         <div class="section-header">
-          <p class="section-pre">Get In Touch</p>
           <h2>Have a Question?</h2>
           <p class="section-subtitle">Send us a message and we&rsquo;ll get back to you as soon as possible.</p>
         </div>
@@ -478,6 +503,30 @@
           <div class="form-status" id="form-status"></div>
           <button type="submit" class="btn btn-block">Send Message</button>
         </form>
+      </div>
+    </section>
+
+    <!-- ─── Instagram ─── -->
+    <section class="instagram-feed">
+      <div class="container">
+        <div class="section-header">
+          <h2>Follow Along on Instagram</h2>
+          <p class="section-subtitle">@rosecitydetailing519</p>
+        </div>
+        <div class="instagram-grid">
+          <a href="https://www.instagram.com/rosecitydetailing519" target="_blank" rel="noopener" class="instagram-item">
+            <img src="images/after1.jpg" alt="Clean Lexus floor mat after professional detailing by Rose City Detailing" loading="lazy">
+          </a>
+          <a href="https://www.instagram.com/rosecitydetailing519" target="_blank" rel="noopener" class="instagram-item">
+            <img src="images/after2.jpg" alt="Spotless Lexus passenger footwell after interior detail by Rose City Detailing" loading="lazy">
+          </a>
+          <a href="https://www.instagram.com/rosecitydetailing519" target="_blank" rel="noopener" class="instagram-item">
+            <img src="images/after3.jpg" alt="Lexus wheel after professional cleaning and shine by Rose City Detailing Windsor" loading="lazy">
+          </a>
+        </div>
+        <div class="instagram-cta">
+          <a href="https://www.instagram.com/rosecitydetailing519" target="_blank" rel="noopener" class="btn btn-outline">View on Instagram</a>
+        </div>
       </div>
     </section>
   </main>
@@ -509,8 +558,8 @@
         </p>
         <p>Proudly rooted in Windsor &mdash; the Rose City.</p>
         <p class="footer-badges">
-          <span class="footer-badge">&#127464;&#127462; Proudly Canadian</span>
-          <span class="footer-badge">&#9989; Registered Business in Ontario</span>
+          <span class="footer-badge">Proudly Canadian</span>
+          <span class="footer-badge">Registered Business in Ontario</span>
         </p>
         <p class="footer-copy">&copy; 2026 Rose City Detailing. All rights reserved.</p>
       </div>

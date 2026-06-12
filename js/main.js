@@ -1,6 +1,11 @@
 // Dark mode toggle
 const themeToggle = document.querySelector('.theme-toggle');
-const savedTheme = localStorage.getItem('theme');
+
+let savedTheme = null;
+try {
+  savedTheme = localStorage.getItem('theme');
+} catch (e) {}
+
 if (savedTheme) {
   document.documentElement.setAttribute('data-theme', savedTheme);
   themeToggle.innerHTML = savedTheme === 'dark' ? '&#9728;' : '&#9790;';
@@ -15,7 +20,9 @@ themeToggle.addEventListener('click', () => {
     document.documentElement.setAttribute('data-theme', 'dark');
   }
   themeToggle.innerHTML = next === 'dark' ? '&#9728;' : '&#9790;';
-  localStorage.setItem('theme', next);
+  try {
+    localStorage.setItem('theme', next);
+  } catch (e) {}
 });
 
 // Mobile menu toggle
